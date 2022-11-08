@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="h-screen ">
+                <div class="h-screen">
                     <h1 class="text-center text-3xl text-white font-sans">
                         Gallery
                     </h1>
@@ -86,9 +86,7 @@
                     </div>
                     <div class="grid grid-cols-4 gap-2 pt-3 max-w-6xl mx-auto">
                         <div class="animation-element slide-left">
-                            
-                            <img src="pothsisu.jpg" class="w-54 h-full "
-                            alt="">
+                            <img src="pothsisu.jpg" class="w-54 h-full " alt="">
                         </div>
                         <div class="animation-element slide-left">
                             <img src="pothsisu2.jpg" class="w-54 h-full animation-element slide-left" alt="">
@@ -113,22 +111,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid grid-cols-2 gap-4 my-4">
-                    <div class="h-64 text-white js-show-on-scroll text-center bg-gray-400 py-2">
-                        <h1 class="text-3xl font-bold">What we do</h1>
-                        <div class="text-xl text-black font-bold">
-                            We conduct social services in the remote areas of Bangladesh and
-                            always strive to help the underprivileged.
+                
+                <div class="h-screen my-4 js-show-on-scroll">
+                    <div class="grid grid-cols-2 gap-4 my-4">
+                        <div class="h-64 text-white js-show-on-scroll text-center bg-gray-400 py-2">
+                            <h1 class="text-3xl font-bold">What we do</h1>
+                            <div class="text-xl text-black font-bold">
+                                We conduct social services in the remote areas of Bangladesh and
+                                always strive to help the underprivileged.
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="bg-green-500 p-4 h-64 text-white js-show-on-scroll text-center">
-                        <h1 class="text-3xl font-bold">Our Vision</h1>
-                        <div class="text-xl text-black font-bold">
-                            Our mission is to be a shelter of the helpless people.
+    
+                        <div class="bg-green-500 p-4 h-64 text-white js-show-on-scroll text-center">
+                            <h1 class="text-3xl font-bold">Our Vision</h1>
+                            <div class="text-xl text-black font-bold">
+                                Our mission is to be a shelter of the helpless people.
+                            </div>
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </main>
@@ -222,7 +224,8 @@
                     var element_height = $(element).outerHeight();
                     var element_top_position = $(element).offset().top;
                     var element_bottom_position = (element_top_position + element_height);
-
+                    console.log(element_bottom_position >= window_top_position, element_top_position <=
+                        window_bottom_position);
                     //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
                     if ((element_bottom_position >= window_top_position) && (element_top_position <=
                             window_bottom_position)) {
