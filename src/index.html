@@ -253,7 +253,6 @@
         var web_window = $(window);
         let screen_hight = screen.height;
 
-
         //check to see if any animation containers are currently in view
         function check_if_in_view() {
           //get current window information
@@ -268,12 +267,11 @@
             var element_top_position = $(element).offset().top;
             var element_bottom_position = element_top_position + element_height;
             // console.log("elb",element_bottom_position,'>=',"wt",window_top_position,"&& elt",element_top_position,'<=',"wb",(window_bottom_position-(screen_hight/2)),'wh',screen_hight,'elh',element_height);
-            let delay = 300*index
+            let delay = 300 * index;
             if (
               element_bottom_position >= window_top_position &&
-              (element_top_position) <= (window_bottom_position-(screen_hight/2))
-            ) 
-            {
+              element_top_position <= window_bottom_position - screen_hight / 2
+            ) {
               // element.addClass("in-view");
               setTimeout(() => {
                 element.addClass("in-view");
