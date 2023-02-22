@@ -48,7 +48,7 @@
       <!-- slider -->
 
       <div class="w-full bg-gray-600">
-        <div class="">
+        <div class="max-w-7xl mx-auto">
           <div
             class="text-center text-4xl font-bold text-white max-w-7xl mx-auto p-5 italic"
           >
@@ -248,47 +248,49 @@
     <script>
       /*Interactivity to determine when an animated element in in view. In view elements trigger our animation*/
       $(document).ready(function () {
-        //window and animation items
-        var animation_elements = $.find(".animation-element");
-        var web_window = $(window);
-        let screen_hight = screen.height;
+  var $animation_elements = $(".animation-element");
+  var $web_window = $(window);
+  var screen_height = window.screen.height;
+  var debounce_timeout;
 
-        //check to see if any animation containers are currently in view
-        function check_if_in_view() {
-          //get current window information
-          var window_top_position = web_window.scrollTop();
-          var window_bottom_position = window_top_position + screen_hight;
+  function check_if_in_view() {
+    var window_top_position = $web_window.scrollTop();
+    var window_bottom_position = window_top_position + screen_height;
 
-          //iterate through elements to see if its in view
-          $.each(animation_elements, function (index) {
-            //get the element sinformation
-            var element = $(this);
-            var element_height = $(element).outerHeight();
-            var element_top_position = $(element).offset().top;
-            var element_bottom_position = element_top_position + element_height;
-            // console.log("elb",element_bottom_position,'>=',"wt",window_top_position,"&& elt",element_top_position,'<=',"wb",(window_bottom_position-(screen_hight/2)),'wh',screen_hight,'elh',element_height);
-            let delay = 300 * index;
-            if (
-              element_bottom_position >= window_top_position &&
-              element_top_position <= window_bottom_position - screen_hight / 2
-            ) {
-              // element.addClass("in-view");
-              setTimeout(() => {
-                element.addClass("in-view");
-              }, delay);
-            } else {
-              element.removeClass("in-view");
-            }
-          });
-        }
+    $animation_elements.each(function (index) {
+      var $element = $(this);
+      var element_height = $element.outerHeight();
+      var element_top_position = $element.offset().top;
+      var element_bottom_position = element_top_position + element_height;
+      var delay = 300 * index;
 
-        //on or scroll, detect elements in view
-        $(window).on("scroll resize", function () {
-          check_if_in_view();
-        });
-        //trigger our scroll event on initial load
-        $(window).trigger("scroll");
+      if (element_bottom_position >= window_top_position && element_top_position <= window_bottom_position - screen_height / 2) {
+        $element.addClass("in-view");
+      } else {
+        $element.removeClass("in-view");
+      }
+    });
+  }
+
+  function debounce(func, delay) {
+    clearTimeout(debounce_timeout);
+    debounce_timeout = setTimeout(func, delay);
+  }
+
+  function request_animation_frame(func) {
+    window.requestAnimationFrame(func);
+  }
+
+  $web_window.on("scroll resize", function () {
+    debounce(function () {
+      request_animation_frame(function () {
+        check_if_in_view();
       });
+    }, 10);
+  });
+
+  $(window).trigger("scroll");
+});
     </script>
   </body>
 </html>
