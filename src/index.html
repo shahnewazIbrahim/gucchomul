@@ -17,186 +17,122 @@
   </head>
   
   <body>
-    <header class="bg-gray-900 p-4 text-white">
+    <header class="bg-gradient-to-r from-orange-500 to-red-600 p-4 text-white shadow-md">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="font-bold text-orange-500 text-4xl">Gucchomul</div>
-        <nav class="">
-          <a class="p-5" href="/">Home</a>
-          <a class="p-5" href="/">About</a>
-          <a class="p-5" href="/">Contact</a>
+        <div class="font-bold text-white text-4xl">Gucchomul</div>
+        <nav class="hidden md:flex space-x-6">
+          <a class="hover:text-orange-300 transition" href="/">Home</a>
+          <a class="hover:text-orange-300 transition" href="/">About</a>
+          <a class="hover:text-orange-300 transition" href="/">Contact</a>
         </nav>
-        <div class="bg-gray-900 p-2">
+        <button class="md:hidden p-2 bg-orange-500 rounded">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
+            stroke-width="2"
+            stroke="white"
             class="w-6 h-6"
           >
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
-              d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              d="M3 6h18M3 12h18M3 18h18"
             />
           </svg>
-        </div>
+        </button>
       </div>
     </header>
-
-    <main class="min-h-screen">
-      <!-- slider -->
-
-      <div class="w-full bg-gray-600">
-        <div class="max-w-full mx-auto">
-          <div
-            class="text-center text-4xl font-bold text-white max-w-7xl mx-auto py-4 italic"
-          >
-            "ঈশ্বর তোমাকে মানুষ বানিয়েছেন যাতে মানবতা চিরকাল বেঁচে থাকে।"
+  
+    <main class="min-h-screen bg-gray-100">
+      <div class="bg-gray-700 pb-4 text-center">
+        <div class="slider w-full mx-auto overflow-hidden h-2/3">
+          <div class="transition-transform duration-700">
+            <img class="w-full rounded shadow-md" src="./pothsisu.jpg" alt="" />
           </div>
-          <div class="slider h-3/4">
-            <div>
-              <img class="w-full" src="./pothsisu.jpg" alt="" />
-            </div>
-            <div>
-              <img class="w-full" src="./pothsisu2.jpg" alt="" />
-            </div>
-            <div>
-              <img class="w-full" src="./homeless.jpg" alt="" />
-            </div>
+          <div class="transition-transform duration-700">
+            <img class="w-full rounded shadow-md" src="./pothsisu2.jpg" alt="" />
           </div>
-
-          <div class="h-screen my-4 js-show-on-scroll">
-            <img class="w-full h-screen" src="./slider1.webp" alt="" />
-          </div>
-
-          <div class="max-w-7xl mx-auto my-16 js-show-on-scroll">
-            <div class="flex justify-center items-center">
-              <img class="w-full" src="./pothsisu.jpg" alt="" />
-              <div class="text-white p-2">
-                জীবনের প্রতিটি অধ্যায়ে তারা বিভিন্ন ধরনের অবহেলা আর বঞ্চনার
-                শিকার। রাস্তাঘাটে এক টাকা-দুই টাকার জন্য তারা পথচারীকে অনুরোধ
-                করে নানাভাবে। কেউ কেউ আবার কাগজ কুড়ায়। তীব্র শীতের মধ্যেও
-                তাদের প্রায়ই গরম কাপড় ছাড়া দেখা যায়, যা অমানবিক ও দুঃখজনক।
-                <br />
-                <br />
-
-                রাজধানী ঢাকাসহ দেশের বিভিন্ন শহরে হাজার হাজার পথশিশু রয়েছে। পথই
-                যাদের আবাস। পথেই যাদের বসবাস। জন্মের পর থেকেই যারা জীবন যুদ্ধের
-                সঙ্গে পরিচিত। রোদ-বৃষ্টি, গরম-শীত যাদের কাছে সমান। পরনে কাপড় আছে
-                কি নেই তা তাদের কাছে মুখ্য নয়। সকালে ঘুম থেকে উঠেই মায়ের হাতের
-                মজাদার খাবার দিয়ে নাস্তা করার পরিবর্তে তারা মানুষের বকুনি খায়।
-                যখন অন্য শিশুরা পাঠশালায় জ্ঞান অন্বেষণে ব্যস্ত তখন এরা নিজদের
-                ক্ষুণিবৃত্তির অনুসন্ধানে লিপ্ত। ছিন্নবস্ত্র পরিহিত বা বস্ত্রহীন
-                এরাই পথ শিশু নামে সর্বত্র পরিচিত।
-              </div>
-            </div>
-          </div>
-          <div class="my-16">
-            <h1 class="text-center text-3xl text-white font-sans">Gallery</h1>
-            <div class="flex justify-center">
-              <hr class="border w-28 mt-3" />
-            </div>
-            <div class="grid grid-cols-4 gap-2 pt-3 max-w-7xl mx-auto">
-              <div class="animation-element slide-left">
-                <img src="pothsisu.jpg" class="w-54 h-full" alt="" />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu2.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu2.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu2.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-              <div class="animation-element slide-left">
-                <img
-                  src="pothsisu2.jpg"
-                  class="w-54 h-full animation-element slide-left"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-7xl mx-auto js-show-on-scroll py-4">
-            <div class="grid grid-cols-2 gap-4 my-4">
-              <div
-                class="h-64 text-white js-show-on-scroll text-center bg-gray-400 py-2"
-              >
-                <h1 class="text-3xl font-bold">What we do</h1>
-                <div class="text-xl text-black font-bold">
-                  We conduct social services in the remote areas of Bangladesh
-                  and always strive to help the underprivileged.
-                </div>
-              </div>
-
-              <div
-                class="bg-green-500 p-4 h-64 text-white js-show-on-scroll text-center"
-              >
-                <h1 class="text-3xl font-bold">Our Vision</h1>
-                <div class="text-xl text-black font-bold">
-                  Our mission is to be a shelter of the helpless people.
-                </div>
-              </div>
-            </div>
+          <div class="transition-transform duration-700">
+            <img class="w-full rounded shadow-md" src="./homeless.jpg" alt="" />
           </div>
         </div>
+        
+        <h1 class="text-4xl font-bold text-white italic mb-4">
+          "ঈশ্বর তোমাকে মানুষ বানিয়েছেন যাতে মানবতা চিরকাল বেঁচে থাকে।"
+        </h1>
       </div>
-    </main>
-
-    <footer class="bg-gray-900 text-white p-4">
-      <div class="max-w-7xl mx-auto">
-        <div class="flex justify-between">
-          <div class="text-2xl font-bold">Gucchomul</div>
-          <div class="flex">
-            <div class="p-2">Home</div>
-            <div class="p-2">About</div>
-            <div class="p-2">Contact</div>
+  
+      <section class="my-16 max-w-7xl mx-auto text-gray-800">
+        <div class="flex flex-wrap items-center">
+          <img
+            class="w-full md:w-1/2 rounded shadow-md"
+            src="./pothsisu.jpg"
+            alt="Pathshishu"
+          />
+          <div class="p-6 md:w-1/2">
+            <p class="text-lg">
+              জীবনের প্রতিটি অধ্যায়ে তারা বিভিন্ন ধরনের অবহেলা আর বঞ্চনার
+              শিকার। রাস্তাঘাটে এক টাকা-দুই টাকার জন্য তারা পথচারীকে অনুরোধ
+              করে নানাভাবে।
+            </p>
+            <p class="mt-4 text-gray-600">
+              রাজধানী ঢাকাসহ দেশের বিভিন্ন শহরে হাজার হাজার পথশিশু রয়েছে।
+              পথই যাদের আবাস। পথেই যাদের বসবাস। জন্মের পর থেকেই যারা জীবন
+              যুদ্ধের সঙ্গে পরিচিত।
+            </p>
           </div>
         </div>
+      </section>
+  
+      <section class="bg-gray-800 py-16">
+        <h2 class="text-center text-3xl text-white font-bold">Gallery</h2>
+        <div class="flex justify-center">
+          <hr class="border-orange-400 w-24 mt-3" />
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 max-w-7xl mx-auto">
+          <img
+            src="pothsisu.jpg"
+            class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+            alt=""
+          />
+          <img
+            src="pothsisu2.jpg"
+            class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+            alt=""
+          />
+          <img
+            src="homeless.jpg"
+            class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+            alt=""
+          />
+          <img
+            src="pothsisu2.jpg"
+            class="w-full h-64 object-cover rounded-lg shadow-md hover:scale-105 transition-transform"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+  
+    <footer class="bg-gray-900 text-white py-6">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="text-lg font-bold">Gucchomul</div>
+        <nav class="flex space-x-4">
+          <a class="hover:text-orange-400 transition" href="/">Home</a>
+          <a class="hover:text-orange-400 transition" href="/">About</a>
+          <a class="hover:text-orange-400 transition" href="/">Contact</a>
+        </nav>
       </div>
     </footer>
-    
   </body>
+  
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script> -->
+    <script src="./js/jquery.js"></script>
+    <script src="./js/slick.js"></script>
+
     <script type="text/javascript">
       const callback = function (entries) {
         entries.forEach((entry) => {
@@ -223,7 +159,7 @@
           slidesToScroll: 1,
           autoplay: true,
           autoplaySpeed: 2000,
-          arrows: false,
+          arrows: true,
           dots: true,
 
           responsive: [
